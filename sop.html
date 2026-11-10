@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="每日执行 SOP Step 0—9、11 节报告结构、00 节模板、章节同步映射、校验清单、记忆与回复规范、视觉规范。">
+<meta name="theme-color" content="#0b1017">
+<title>执行 SOP · 考公选调 2028 届行动计划</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="返回总览">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20 6v6c0 5-3.4 8.2-8 9.5-4.6-1.3-8-4.5-8-9.5V6l8-3.5Z"/><path d="m8.6 12 2.3 2.3 4.6-4.6"/></svg>
+      </span>
+      <span class="brand-text">选调计划<small>2028 届 · 湖南优先</small></span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="index.html">总览</a>
+      <a href="goals.html">目标与原则</a>
+      <a href="routes.html">赛道与资格</a>
+      <a href="timeline.html">时间轴与行动</a>
+      <a href="sop.html">执行 SOP</a>
+      <a href="glossary.html">术语与口径</a>
+      <a href="sources.html">信源与校验</a>
+    </nav>
+  </div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow"><span class="dot"></span> Page 04 / 步骤</span>
+    <h1>执行 <span class="accent">SOP</span> 与交付规格</h1>
+    <p class="lead">每天一轮、增量更新、不重写全文。计划对调度、报告结构、校验与记忆文件路径都有固定规定：不要重建一套新体系。</p>
+    <div class="chips">
+      <span class="chip">频率 <b>每天一次</b></span>
+      <span class="chip">时间 <b>05:05 GMT+8</b></span>
+      <span class="chip">报告 <b>固定 11 节</b></span>
+      <span class="chip">模式 <b>增量更新</b></span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="schedule">
+  <div class="container">
+    <div class="section-head"><span class="section-num">01</span><h2>调度参数</h2></div>
+    <p class="section-desc">计划第 0.1 / 0.2 节规定，所有日期、倒计时、「今日」均以 GMT+8 为准。</p>
+    <div class="kv">
+      <div class="kv-item"><div class="k">任务名</div><div class="v"><strong>考公选调</strong></div></div>
+      <div class="kv-item"><div class="k">频率 / 时间</div><div class="v">每天一次，循环执行；<strong>05:05（Asia/Shanghai，UTC+8）</strong></div></div>
+      <div class="kv-item"><div class="k">调度规则</div><div class="v"><span class="inline-code">FREQ=DAILY;BYHOUR=5;BYMINUTE=5</span></div></div>
+      <div class="kv-item"><div class="k">状态 / 到期日</div><div class="v">ACTIVE；无到期日（validFrom / validUntil 均为空）</div></div>
+      <div class="kv-item"><div class="k">时区基准</div><div class="v">所有日期、倒计时、「今日」均以 GMT+8 为准</div></div>
+      <div class="kv-item"><div class="k">范围</div><div class="v">workspaceScope 用默认值 <span class="inline-code">task</span>；<span class="inline-code">scheduledAt</span> 不填（一次性任务才需要）</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="steps">
+  <div class="container">
+    <div class="section-head"><span class="section-num">02</span><h2>每轮执行 Step 0—9</h2></div>
+    <p class="section-desc">计划第 7 节的完整流程。Step 0 的备份必须先于任何写入；Step 5 用分段替换脚本而不是 sed，便于控制与校验。</p>
+    <div class="steps">
+      <div class="step"><div class="step-num">0</div><div><h3>备份</h3><p><span class="inline-code">cp 选调与国考信息整理_湖南优先.html 选调与国考信息整理_湖南优先.bak.html</span> —— 先保留上一版可回滚。</p></div></div>
+      <div class="step"><div class="step-num">1</div><div><h3>读记忆，定检索窗口</h3><p>读跨轮 memory.md 的「执行记录」末条，取上次执行日期；窗口 = 次日起至今天。首次运行取近 3 天。同时读「遗留待确认项」与「下次执行建议」。</p></div></div>
+      <div class="step"><div class="step-num">2</div><div><h3>按优先级检索</h3><p>广东 2027 定向选调公告（最高优先，未发布也要明确写「截至今日仍未发布」）→ 湖南 2027 选调后续与湖南省考节奏 → 湖大就业网通知公告栏新转载 → 国考 / 广东省考 / 江苏省考节点与实况 → 其他面向湖大的新定向公告。每条线索记录来源 URL、发布日、是否官方、原文关键句。</p></div></div>
+      <div class="step"><div class="step-num">3</div><div><h3>官方源核实</h3><p>抓官方公告原文；附件 PDF 走下载 + 文本提取逐条匹配校名 / 专业代码 / 省份。对每个新公告回答：湖大在不在名单内？软条件能否用奖学金满足？专业目录怎么认？报名 / 缴费 / 笔试三个日期分别是什么？</p></div></div>
+      <div class="step"><div class="step-num">4</div><div><h3>形成判断，不堆数据</h3><p>每条信息归类为「新增可报 / 条件收紧 / 时间风险 / 仅观察样本」，写出对应动作；检查是否推翻既有口径，若是写好「此前 X 作废」的句子。</p></div></div>
+      <div class="step"><div class="step-num">5</div><div><h3>重写 00 节</h3><p>按第 5.4 节模板整节重写「00 今日动态」，起点 <span class="inline-code">&lt;section id="today"&gt;</span>，终点锚点 <span class="inline-code">&lt;!-- ============ 1.</span>；用 Python 分段替换。</p></div></div>
+      <div class="step"><div class="step-num">6</div><div><h3>同步 01—10 节 + hero + footer</h3><p>按第 5.5 节映射逐项改；改完搜旧数值（被替代的竞争比、旧周期表述），确保没有自相矛盾的残留；合法保留的旧值必须带「已作废」标注。</p></div></div>
+      <div class="step"><div class="step-num">7</div><div><h3>校验</h3><p>标签配对、<span class="inline-code">\ufffd</span> 乱码计数为 0、hero「最近更新」= 00 节标题日期 = 当日、11 个 section id 与 11 个 nav 锚点齐全、抽 00 节纯文本预览、文件末尾 <span class="inline-code">&lt;/html&gt;</span> 完整。</p></div></div>
+      <div class="step"><div class="step-num">8</div><div><h3>写记忆</h3><p>追加到跨轮 memory.md 的「执行记录」末尾；新建 / 追加当日 YYYY-MM-DD.md；清理本轮临时脚本，只留交付物。</p></div></div>
+      <div class="step"><div class="step-num">9</div><div><h3>交付</h3><p>给出 HTML 路径；回复正文按第 10 节手机微信格式；若平台支持自动化结果回传，同时发送摘要。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="structure">
+  <div class="container">
+    <div class="section-head"><span class="section-num">03</span><h2>报告结构 · 固定 11 节</h2></div>
+    <p class="section-desc">id 与顺序不得改动；导航固定 11 个锚点。00 节每轮整节重写，footer 每轮补口径。</p>
+    <div class="map-grid">
+      <div class="map-cell"><div class="n">00 / today</div><div class="t">今日动态</div><div class="d">整节重写</div></div>
+      <div class="map-cell"><div class="n">01 / verdict</div><div class="t">结论速览</div><div class="d">随新结论</div></div>
+      <div class="map-cell"><div class="n">02 / gap</div><div class="t">关键卡点（党员身份）</div><div class="d">随条件变化</div></div>
+      <div class="map-cell"><div class="n">03 / match</div><div class="t">资格逐条对照</div><div class="d">随新省份</div></div>
+      <div class="map-cell"><div class="n">04 / routes</div><div class="t">四条赛道横向对比</div><div class="d">随新增通道</div></div>
+      <div class="map-cell"><div class="n">05 / hunan</div><div class="t">湖南定向选调拆解</div><div class="d">随湖南新数据</div></div>
+      <div class="map-cell"><div class="n">06 / gd</div><div class="t">广东选调拆解</div><div class="d">随广东新数据</div></div>
+      <div class="map-cell"><div class="n">07 / other</div><div class="t">其他值得一看的通道</div><div class="d">随新增省份</div></div>
+      <div class="map-cell"><div class="n">08 / timeline</div><div class="t">你的时间轴（2028 届）</div><div class="d">随新节点</div></div>
+      <div class="map-cell"><div class="n">09 / todo</div><div class="t">行动清单</div><div class="d">随新动作</div></div>
+      <div class="map-cell"><div class="n">10 / links</div><div class="t">官方入口</div><div class="d">随新信源</div></div>
+      <div class="map-cell"><div class="n">— / footer</div><div class="t">假设与数据口径</div><div class="d">每轮补口径</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="template">
+  <div class="container">
+    <div class="section-head"><span class="section-num">04</span><h2>「00 今日动态」模板</h2></div>
+    <p class="section-desc">按此顺序，缺项也要保留结构。</p>
+    <div class="kv">
+      <div class="kv-item"><div class="k">1 · 节标题</div><div class="v"><span class="inline-code">.sec-head</span>：<span class="inline-code">00</span> + 今日动态 · YYYY-MM-DD</div></div>
+      <div class="kv-item"><div class="k">2 · 定位</div><div class="v"><span class="inline-code">.sec-desc</span>：一句话定位本轮</div></div>
+      <div class="kv-item"><div class="k">3 · 一句话总结</div><div class="v">蓝色 alert，3 段：本轮最大变化 / 对资格与排期的影响 / 若推翻旧口径显式写「此前 X 作废」</div></div>
+      <div class="kv-item"><div class="k">4 · 倒计时 kv</div><div class="v">4 项：湖南 2028 公告 / 广东 2027 选调公告 / 国考 2028 报名 / 广东 2028 省考笔试；每项注明「按历年规律推算」</div></div>
+      <div class="kv-item"><div class="k">5 · 六条新信息表</div><div class="v">新公告 / 条件变化 / 口径修正 / 竞争数据 / 考试节点 / 持续跟踪项，每条给「事实 → 判断 → 动作」</div></div>
+      <div class="kv-item"><div class="k">6 · 专卡 2—3 张</div><div class="v">本轮最需要展开的省份或机制，含要素对照表 + 结论段</div></div>
+      <div class="kv-item"><div class="k">7 · 今天该做的三件事</div><div class="v">红色 alert，每条可执行、带日期</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mapping">
+  <div class="container">
+    <div class="section-head"><span class="section-num">05</span><h2>新信息 → 章节同步映射</h2></div>
+    <p class="section-desc">计划第 5.5 节。任何一条新信息都不能只写进 00 节，必须同步到对应章节。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>新信息类型</th><th>必须同步的位置</th></tr></thead>
+        <tbody>
+          <tr><td>新增省份</td><td>07 节加 route 卡 + 省份表扩行；03 节加「院校范围」行；04 节加索引；10 节加入口；footer 加数据口径段</td></tr>
+          <tr><td>党员条件变化</td><td>02 节标题与表、01 节结论、09 节第 1 条</td></tr>
+          <tr><td>湖南新节点</td><td>05 节流程表 / 08 节时间轴 / 09 节行动清单</td></tr>
+          <tr><td>广东新数据</td><td>06 节参数卡 / 08 节「广东两枪」条</td></tr>
+          <tr><td>竞争数据更新</td><td>footer 竞争数据段 + 01 节 kv；旧数值若被替代须显式标注「已作废」</td></tr>
+          <tr><td>任何新日期</td><td>08 节时间轴 + 09 节日历提醒</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="checklist">
+  <div class="container">
+    <div class="section-head"><span class="section-num">06</span><h2>交付前校验清单</h2></div>
+    <p class="section-desc">计划第 8 节，逐条打勾再交付。</p>
+    <ul class="check-list ok">
+      <li><span class="inline-code">.bak.html</span> 是上一版，未被本轮覆盖成新内容。</li>
+      <li>00 节标题日期、hero「最近更新」、记忆文件日期三者一致。</li>
+      <li>所有倒计时以当天为基准重算，标注「推算」。</li>
+      <li>新出现的省份已同步到 03 / 04 / 07 / 10 节与 footer。</li>
+      <li>新日期已进 08 时间轴 + 09 行动清单。</li>
+      <li>被推翻的旧口径在 00 节显式声明作废，全文无矛盾残留。</li>
+      <li>用户不能报的 2027 届批次没有写成行动建议。</li>
+      <li>每个数字都有来源，机构数据标注「非官方」。</li>
+      <li>section / div / table 标签配对、<span class="inline-code">\ufffd</span> 乱码计数、结尾 <span class="inline-code">&lt;/html&gt;</span>。</li>
+      <li>回复正文符合手机微信格式。</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="memory">
+  <div class="container">
+    <div class="section-head"><span class="section-num">07</span><h2>记忆规范与回复格式</h2></div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-head"><h3>跨轮 memory.md（追加，永不覆盖）</h3><span class="badge info">第 9 节</span></div>
+        <p>结构固定的六段：<strong>任务定义 / 关键口径（已确认）/ 执行记录 / 遗留待确认项 / 下次执行建议</strong>。每条执行记录格式：<span class="inline-code">### YYYY-MM-DD（第 N 轮，增量更新 · 本轮主题）</span>，含改动范围、关键新发现、核实数据、倒计时、备份说明。</p>
+        <p style="margin-top:10px">当日日志 <span class="inline-code">YYYY-MM-DD.md</span>：交付物体积、改动范围、关键结论、技术要点、待办。只记有跨会话价值的内容，不记临时路径与工具报错。</p>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>回复用户的格式（手机微信阅读）</h3><span class="badge purple">第 10 节</span></div>
+        <ul class="check-list">
+          <li>不要宽表格：手机放不下 4 列以上，宁可拆成分块列表。</li>
+          <li>每行短，一行一个信息点；金额与比率保留两位小数。</li>
+          <li>结论前置：第一屏先给「多出几条路 / 哪条被卡死 / 哪个日期最危险」。</li>
+          <li>重要数字单独成行、加粗；少用 Markdown 标题层级。</li>
+          <li>长明细放文件里给路径，正文只留 <strong>5—8 条要点</strong>。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="visual">
+  <div class="container">
+    <div class="section-head"><span class="section-num">08</span><h2>视觉规范</h2></div>
+    <p class="section-desc">主报告为深色主题、CSS 变量固定、单文件无外部字体 / JS / CDN。本站点沿用同一套色板，只把它拆成外部样式与脚本以便多页复用。</p>
+    <div class="swatches">
+      <div class="swatch"><div class="c" style="background:#0d1117"></div><div class="lab">--bg #0d1117</div></div>
+      <div class="swatch"><div class="c" style="background:#161d29"></div><div class="lab">--card #161d29</div></div>
+      <div class="swatch"><div class="c" style="background:#e6edf6"></div><div class="lab">--txt #e6edf6</div></div>
+      <div class="swatch"><div class="c" style="background:#4a9eff"></div><div class="lab">--blue #4a9eff</div></div>
+      <div class="swatch"><div class="c" style="background:#a371f7"></div><div class="lab">--purple #a371f7</div></div>
+      <div class="swatch"><div class="c" style="background:#3fb950"></div><div class="lab">--green #3fb950</div></div>
+      <div class="swatch"><div class="c" style="background:#e3a008"></div><div class="lab">--amber #e3a008</div></div>
+      <div class="swatch"><div class="c" style="background:#f2555a"></div><div class="lab">--red #f2555a</div></div>
+    </div>
+    <div class="alert blue" style="margin-top:16px">
+      <span class="alert-title">组件与语义</span>
+      alert 四色变体：红 = 硬缺口与时间风险，绿 = 已合格，琥珀 = 需注意，蓝 = 中性说明；表格一律包在可横向滚动的容器里（移动端适配）；徽章用「✓ 可报 / 条件型 / ✗ 不可报」区分判定。
+    </div>
+    <h3 style="margin-top:26px">文件清单</h3>
+    <div class="kv" style="margin-top:12px">
+      <div class="kv-item"><div class="k">主文件</div><div class="v"><span class="inline-code">选调与国考信息整理_湖南优先.html</span>（11 节，单文件 CSS 内联）</div></div>
+      <div class="kv-item"><div class="k">回滚备份</div><div class="v"><span class="inline-code">选调与国考信息整理_湖南优先.bak.html</span></div></div>
+      <div class="kv-item"><div class="k">跨轮记忆</div><div class="v"><span class="inline-code">.workbuddy-ai/memory/automations/&lt;任务id&gt;/memory.md</span></div></div>
+      <div class="kv-item"><div class="k">每日日志</div><div class="v"><span class="inline-code">.workbuddy-ai/memory/YYYY-MM-DD.md</span></div></div>
+      <div class="kv-item"><div class="k">计划本体</div><div class="v"><span class="inline-code">考公选调_定时任务迁移包.md</span>（每轮先重读，以全文为准）</div></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20 6v6c0 5-3.4 8.2-8 9.5-4.6-1.3-8-4.5-8-9.5V6l8-3.5Z"/><path d="m8.6 12 2.3 2.3 4.6-4.6"/></svg>
+        </span>
+        <span class="brand-text">选调计划<small>2028 届 · 湖南优先</small></span>
+      </a>
+      <p class="footer-note">本站点是《考公选调_定时任务迁移包》（v11）与《选调与国考信息整理_湖南优先.html》（2026-11-10 第 15 轮）的结构化呈现，未添加计划之外的事实。所有 2027 届批次仅作观察样本；2028 届具体条款与时间以当年官方公告为准，「预计 / 推算」项均为按历年规律推算值。</p>
+    </div>
+    <div>
+      <h4 style="color:var(--text);margin:0 0 10px">页面导航</h4>
+      <div class="footer-links">
+        <a href="index.html">总览</a>
+        <a href="goals.html">目标与原则</a>
+        <a href="routes.html">赛道与资格</a>
+        <a href="timeline.html">时间轴与行动</a>
+        <a href="sop.html">执行 SOP</a>
+        <a href="glossary.html">术语与口径</a>
+        <a href="sources.html">信源与校验</a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>数据基准 2026-11-10（GMT+8） · 第 15 轮</span>
+    <span>内容与计划保持一致 · 站内资源本地化，无 CDN 依赖</span>
+  </div>
+</footer>
+<button class="to-top" id="toTop" type="button" aria-label="回到顶部">↑</button>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
