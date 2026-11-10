@@ -48,6 +48,9 @@ python -m http.server 8000
 
 也可以直接双击 `index.html`（站内链接为相对路径，均可正常跳转）。
 
-## 发布
+## 发布与在线访问
 
-本仓库以 GitHub Pages 发布，发布源为默认分支根目录，入口为 `index.html`。站内所有链接均为相对路径，官方信源链接为绝对 HTTPS 地址并在新标签打开。
+- 仓库：<https://github.com/sxs159733/xuandiao-2028-plan>
+- 站点：<https://sxs159733.github.io/xuandiao-2028-plan/>
+
+以 GitHub Pages 发布，发布源为 `main` 分支根目录，入口为 `index.html`。站内所有链接均为相对路径，页面间的导航、样式与脚本均可在该域名下正常加载；官方信源链接为绝对 HTTPS 地址并在新标签打开。仓库根目录含 `.nojekyll`，避免静态资源被 Jekyll 处理。
